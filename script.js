@@ -355,7 +355,7 @@ function bullStory() {
         end: "52% top",
         scrub: 2,
       },
-      top: "10%"
+      top: "50%"
     })
   }
   
