@@ -94,6 +94,9 @@ function dom() {
       scrub: 1.8,
       pin: true,
       trigger: "#main",
+      start:"top top",
+      end:"3% top",
+      markers:true,
     },
     onUpdate: render,
   });
@@ -125,15 +128,15 @@ function dom() {
     );
   }
 
-  gsap.to(".heroSection>canvas", {
-    scale: 0.8,
-    scrollTrigger: {
-      scrub: 0.1,
-      trigger: "#main",
-      start: "bottom 100%",
-      invalidateOnRefresh: true,
-    },
-  });
+  // gsap.to(".heroSection>canvas", {
+  //   scale: 0.8,
+  //   scrollTrigger: {
+  //     scrub: 0.1,
+  //     trigger: "#main",
+  //     start: "bottom 100%",
+  //     invalidateOnRefresh: true,
+  //   },
+  // });
 
   // ScrollTrigger.create({
   //   trigger: "#main",
@@ -141,6 +144,14 @@ function dom() {
   //   start: "bottom 100%",
   // });
 }
+
+
+
+
+
+
+
+
 dom();
 
 function videoSection() {
@@ -158,24 +169,49 @@ function videoSection() {
     onLeaveBack: () => video.pause(),
   });
 
-  let tl1 = gsap.timeline({
-    scrollTrigger: {
-      scrub: 0.1,
-      trigger: "#main",
-      start: "11.5% top",
-      end: "40% top",
-      pin: true,
-      // markers:true,
-    },
-  });
+  // let tl1 = gsap.timeline({
+  //   scrollTrigger: {
+  //     scrub: 0.1,
+  //     trigger: "#main",
+  //     start: "11.5% top",
+  //     end: "40% top",
+  //     pin: true,
+  //     markers:true,
+  //   },
+  // });
+
+  // -------------
+  const splitTypes = document.querySelectorAll('.reveal-type');
+
+splitTypes.forEach((char, i) => {
+    const text = new SplitType(char, { types: 'chars' });
+
+    // Set initial opacity to 0
+    gsap.set(text.chars, { opacity: 1 });
+
+    gsap.from(text.chars, {
+        scrollTrigger: {
+          trigger: "#main",
+          start: "11.5% top",
+          end: "20% top",
+          scrub: true,
+          pin:true,
+          markers: true,
+        },
+        duration: 0.5, // Adjust the duration as needed
+        stagger: 0.1,
+        opacity: 0.2, // Set the target opacity to 1
+    }, "a");
+});
+  // ------------
 
 
   if (window.innerWidth < 600) {
-    tl1.to(".videoOverlay", { opacity: 0.85 }, "+.4");
-    tl1.to(".videoOverlayText", { bottom: "40%", duration: 8 }, "+.8");
+    // tl1.to(".videoOverlay", { opacity: 0.85 }, "+.4");
+    // tl1.to(".videoOverlayText", { bottom: "40%", duration: 8 }, "+.8");
   } else {
-    tl1.to(".videoOverlay", { opacity: 0.85 }, "+.4");
-    tl1.to(".videoOverlayText", { bottom: "30%", duration: 8 }, "+.8");
+    // tl1.to(".videoOverlay", { opacity: 0.85 }, "+.4");
+    // tl1.to(".videoOverlayText", { bottom: "30%", duration: 8 }, "+.8");
   }
 
 
@@ -315,6 +351,10 @@ bullStory()
 function logoShrink() {
   let section = document.getElementById('section'),
     dot = document.querySelector(".dot");
+    var newImageUrl = "./images/motaroLogo.svg";
+    var bullimgElement = document.querySelector(".bullimg");
+
+
 
   gsap.set(dot, {
     width: "142vmax", // ensures it fills every part of the screen. 
@@ -349,7 +389,8 @@ function logoShrink() {
     });
 
     if (window.innerWidth < 600) {
-      tl1.to(".bullimg", { duration: 0.8, width: "55%", y: -300 }, "+.6");
+      tl1.to(".bullimg", { duration: 0.8, width: "5%",scale:"0.1", y: -300 }, "+.6");
+
       tl1.to(".nameLogo", { duration: 0.8, y: -650 }, "+.6");
       tl1.to(".logoTextSection", { duration: 0.8, y: -600 }, "+.9");
     } else {

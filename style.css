@@ -238,7 +238,7 @@ body {
   width: 100vw;
   background: #000000;
   position: absolute;
-  opacity: 0;
+  opacity: 0.8;
   z-index: 5;
   transition: all ease 0.1s;
   top: 0%;
@@ -246,11 +246,11 @@ body {
 
 .videoOverlayText {
   position: absolute;
-  bottom: -48%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 3rem;
+  font-size: 4.5rem;
   text-align: center;
   z-index: 6;
   width: 70%;
