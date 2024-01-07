@@ -442,7 +442,6 @@ body {
     width: 100vw;
     background: #000000;
     position: absolute;
-    opacity: 0;
     z-index: 5;
     transition: all ease 0.1s;
     top: 0%;
@@ -740,10 +739,11 @@ body {
   /* background-color: aqua; */
 }
 
-#section img {
+.bullimg {
   width: 40%;
   z-index: 99;
   transform: scale(1);
+  transition: all ease 0.5s;
 }
 
 .dot {
@@ -785,6 +785,7 @@ body {
   display: block;
   margin: 0 auto;
   height: 10vh;
+  opacity: 0;
 }
 
 /* <!-- -------------------Logo Shrink Section------------------ --> */
@@ -886,7 +887,7 @@ body {
     width: 290px;
   }
 
-  #section img {
+  .bullimg {
     width: 90%;
     /* scale: 3; */
   }
