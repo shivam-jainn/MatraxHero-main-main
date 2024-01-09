@@ -427,7 +427,21 @@ function logoShrink() {
     });
     tl1.to(".nameLogo", { duration: 0.8, y: -650 }, "+.6");
     tl1.to(".logoTextSection", { duration: 0.8, y: -600 }, "+.9");
-  } else {
+  }else if(window.innerWidth > 600 && window.innerWidth<1500){
+    tl1.to(".bullimg", { zIndex: 10 });
+    tl1.to(".bullimg", { duration: 0.8, width: "15%", y: -200 }, "+.6");
+    tl1.to(".bullimg", {
+      duration: 0.8,
+      onStart: function () {
+        document.querySelector(".bullimg").src = newImageUrl;
+      },
+      onReverseComplete: function () {
+        document.querySelector(".bullimg").src = originalImageUrl;
+      },
+    });
+    tl1.to(".nameLogo", { duration: 0.8, y: -530, width: "0" }, "+.6");
+    tl1.to(".logoTextSection", { duration: 0.8, y: -500 }, "+.9");
+  }  else {
     tl1.to(".bullimg", { zIndex: 10 });
     tl1.to(".bullimg", { duration: 0.8, width: "15%", y: -200 }, "+.6");
     tl1.to(".bullimg", {
