@@ -298,7 +298,7 @@ body {
 .horizontal__content {
   display: flex;
   background-color: rgb(255, 255, 255);
-  padding: 0 5rem;
+  padding: 0 3vw;
   height: 63vh;
   width: 130%;
 }
@@ -316,7 +316,7 @@ body {
 
 .horizontal__item:not(:last-child) {
   /* margin-right: 20vh; */
-  margin-right: 7vw;
+  margin-right: 4.5vw;
 }
 
 .tyre_img_hor img {
@@ -780,7 +780,7 @@ body {
 
 .bullimg {
   width: 40%;
-  z-index: 99;
+  z-index: 9;
   transform: scale(1);
   transition: all ease 0.5s;
 }
@@ -1065,7 +1065,7 @@ footer {
   display: inline-block;
   white-space: nowrap;
   animation-name: scroll;
-  animation-duration: 35s;
+  animation-duration: 10s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
@@ -1173,6 +1173,11 @@ footer {
 .text-container {
   flex: 1;
 }
+.text-container p {
+  font-size: 1.5vw;
+  font-weight: 200;
+  padding-top: 2rem;
+}
 
 .card-container {
   flex: 2;
@@ -1195,7 +1200,7 @@ footer {
   margin: 0.4rem;
   transition: all ease 0.5s;
 
-  height: 200px;
+  height: 350px;
   z-index: 99;
 }
 
@@ -1218,6 +1223,10 @@ footer {
     font-size: 6vw;
   }
 
+  .text-container p {
+    font-size: 3vw;
+  }
+
   .eco-section {
     height: 100vh;
     align-items: center;
@@ -1237,6 +1246,9 @@ footer {
   .card-title {
     font-size: 1.5rem;
   }
+  /* .card-eco {
+    height: 300px;
+  } */
 }
 
 /* three stupid lines styles */
