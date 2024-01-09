@@ -1,15 +1,15 @@
 const lenis = new Lenis({
   duration: 4,
   smooth: true,
-  easing: (t, friction = 0.1) => {
-    // Apply friction to the easing function
-    const easedValue = Math.min(1, 1.001 - Math.pow(2, -10 * t));
+  // easing: (t, friction = 0.1) => {
+  //   // Apply friction to the easing function
+  //   const easedValue = Math.min(1, 1.001 - Math.pow(2, -10 * t));
 
-    // Apply friction to the eased value
-    const frictionedValue = easedValue - friction * t;
+  //   // Apply friction to the eased value
+  //   // const frictionedValue = easedValue - friction * t;
 
-    return Math.min(1, frictionedValue);
-  },
+  //   return Math.min(1, frictionedValue);
+  // },
 });
 function raf(time) {
   lenis.raf(time);
@@ -406,6 +406,7 @@ function logoShrink() {
     dot,
     {
       scale: 0,
+      // zIndex: "10",
     },
     {
       scale: 1,
@@ -427,6 +428,7 @@ function logoShrink() {
     tl1.to(".nameLogo", { duration: 0.8, y: -650 }, "+.6");
     tl1.to(".logoTextSection", { duration: 0.8, y: -600 }, "+.9");
   } else {
+    tl1.to(".bullimg", { zIndex: 10 });
     tl1.to(".bullimg", { duration: 0.8, width: "15%", y: -200 }, "+.6");
     tl1.to(".bullimg", {
       duration: 0.8,
