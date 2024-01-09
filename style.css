@@ -730,7 +730,7 @@ body {
   font-size: clamp(4rem, 10vw, 10rem);
   text-align: center;
   font-weight: 800;
-  line-height: 12vw;
+  line-height: 20vw;
   overflow: hidden;
 }
 
@@ -886,7 +886,7 @@ body {
   /* background-color: rgb(198, 97, 97); */
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .globalPresenceContent {
@@ -969,7 +969,7 @@ body {
     /* height: 90%; */
     object-fit: cover;
     object-position: center;
-    width: 100%;
+    /* width: 100%; */
     /* width: 100%; */
     /* background-color: #a90000; */
     padding: 1vw 0;
@@ -1182,6 +1182,9 @@ footer {
 .card-container {
   flex: 2;
 }
+.card-text h3 {
+  margin-bottom: 10px;
+}
 
 .card-text {
   opacity: 0;
@@ -1200,7 +1203,7 @@ footer {
   margin: 0.4rem;
   transition: all ease 0.5s;
 
-  height: 350px;
+  height: 20vw;
   z-index: 99;
 }
 
