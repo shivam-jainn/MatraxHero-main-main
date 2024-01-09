@@ -437,8 +437,8 @@ function logoShrink() {
         document.querySelector(".bullimg").src = originalImageUrl;
       },
     });
-    tl1.to(".nameLogo", { duration: 0.8, y: -530 }, "+.6");
-    tl1.to(".logoTextSection", { duration: 0.8, y: -450 }, "+.9");
+    tl1.to(".nameLogo", { duration: 0.8, y: -530, width: "0" }, "+.6");
+    tl1.to(".logoTextSection", { duration: 0.8, y: -630 }, "+.9");
   }
 
   // --------------------------------

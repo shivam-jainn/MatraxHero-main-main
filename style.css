@@ -820,7 +820,7 @@ body {
 }
 
 .nameLogo {
-  width: 15%;
+  width: 0%;
   display: block;
   margin: 0 auto;
   height: 10vh;
@@ -855,7 +855,7 @@ body {
   }
 
   .nameLogo {
-    width: 55%;
+    width: 0%;
     display: block;
     margin: 0 auto;
     height: 10vh;
